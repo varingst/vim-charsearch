@@ -1,0 +1,181 @@
+Given:
+  foo bar baz
+  foo bar baz
+  foo bar baz
+  foo bar baz
+  foo bar baz
+  foo bar baz
+  foo bar baz
+  foo bar baz
+
+Do(search#f):
+  0\<Plug>(search#f)bx\<Plug>(search#n)x
+  2G02\<Plug>(search#f)bx\<Plug>(search#N)x
+  3G0v\<Plug>(search#f)bx
+  4G0v2\<Plug>(search#f)bx
+  5G0d\<Plug>(search#f)b
+  6G0d2\<Plug>(search#f)b
+  7Gd\<Plug>(search#f)b:normal! .\<CR>
+  8GI\<Plug>(search#f)b_\<Plug>(search#f)b_\<Plug>(search#f)z_
+
+Expect:
+  foo ar az
+  foo ar az
+  ar baz
+  az
+  ar baz
+  az
+  az
+  foo b_ar b_az_
+
+Given:
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+
+Do(search#F):
+  $\<Plug>(search#F)bx\<Plug>(search#N)x
+  2G$2\<Plug>(search#F)bx\<Plug>(search#n)x
+  3G$v\<Plug>(search#F)bx
+  4G$v2\<Plug>(search#F)bx
+  5G$d\<Plug>(search#F)b
+  6G$d2\<Plug>(search#F)b
+  7G$d\<Plug>(search#F)b:normal! .\<CR>
+  8GA\<Plug>(search#F)b_\<Plug>(search#F)r_
+
+
+Expect:
+  ra za foo
+  ra za foo
+  rab za
+  ra
+  rab za
+  ra
+  ra
+  r_ab zab_ foo
+
+Given:
+  foo bar baz
+  foo bar baz
+  foo bar baz
+  foo bar baz
+  foo bar baz
+  foo bar baz
+  foo bar baz
+  foo bar baz
+
+Do(search#t):
+  0\<Plug>(search#t)ax\<Plug>(search#n)x
+  2G02\<Plug>(search#t)ax\<Plug>(search#N)x
+  3G0v\<Plug>(search#t)bx
+  4G0v2\<Plug>(search#t)bx
+  5G0d\<Plug>(search#t)b
+  6G0d2\<Plug>(search#t)b
+  7G0d\<Plug>(search#t)b:normal! .\<CR>
+  8GI\<Plug>(search#t)b_\<Plug>(search#t)b_
+
+Expect:
+  foo ar az
+  foo baraz
+  bar baz
+  baz
+  bar baz
+  baz
+  baz
+  foo _bar _baz
+
+Given:
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+
+Do(search#F):
+  $\<Plug>(search#T)bx\<Plug>(search#N)x
+  2G$2\<Plug>(search#T)bx\<Plug>(search#n)x
+  3G$v\<Plug>(search#T)bx
+  4G$v2\<Plug>(search#T)bx
+  5G$d\<Plug>(search#T)b
+  6G$d2\<Plug>(search#T)b
+  7G$d\<Plug>(search#T)b:normal! .\<CR>
+  8GA\<Plug>(search#T)b_\<Plug>(search#T)r_
+
+Expect:
+  rabzabfoo
+  rabzabfoo
+  rab zab
+  rab
+  rab zab
+  rab
+  rab
+  _rab za_b foo
+
+Given:
+  foo bar bar
+  foo bar bar
+  foo bar bar
+  foo bar bar
+  foo bar bar
+  foo bar bar
+  foo bar bar
+  foo bar bar
+
+Do (search#s):
+  0\<Plug>(search#s)arx\<Plug>(search#n)x
+  2G02\<Plug>(search#s)arx\<Plug>(search#N)x
+  3G0v\<Plug>(search#s)arx
+  4G0v2\<Plug>(search#s)arx
+  5G0d\<Plug>(search#s)ar
+  6G0d2\<Plug>(search#s)ar
+  7G0d\<Plug>(search#s)ar:normal! .\<CR>
+  8GI\<Plug>(search#s)oo_
+
+Expect:
+  foo br br
+  foo br br
+  ar bar
+  ar
+  ar bar
+  ar
+  ar
+  f_oo bar bar
+
+Given:
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+  rab zab foo
+
+Do (search#S):
+  $\<Plug>(search#S)abx\<Plug>(search#N)x
+  2G$2\<Plug>(search#S)abx\<Plug>(search#n)x
+  3G$v\<Plug>(search#S)abx
+  4G$v2\<Plug>(search#S)abx
+  5G$d\<Plug>(search#S)ab
+  6G$d2\<Plug>(search#S)ab
+  7G$d\<Plug>(search#S)ab:normal! .\<CR>
+  8GA\<Plug>(search#S)ab_
+
+Expect:
+  rb zb foo
+  rb zb foo
+  rab zab
+  rab
+  rab zab
+  rab
+  rab
+  rab z_ab foo
+
