@@ -8,15 +8,15 @@ Given:
   foo bar baz
   foo bar baz
 
-Do(search#f):
-  0\<Plug>(search#f)bx\<Plug>(search#n)x
-  2G02\<Plug>(search#f)bx\<Plug>(search#N)x
-  3G0v\<Plug>(search#f)bx
-  4G0v2\<Plug>(search#f)bx
-  5G0d\<Plug>(search#f)b
-  6G0d2\<Plug>(search#f)b
-  7Gd\<Plug>(search#f)b:normal! .\<CR>
-  8GI\<Plug>(search#f)b_\<Plug>(search#f)b_\<Plug>(search#f)z_
+Do(charsearch#f):
+  0\<Plug>(charsearch#f)bx\<Plug>(charsearch#n)x
+  2G02\<Plug>(charsearch#f)bx\<Plug>(charsearch#N)x
+  3G0v\<Plug>(charsearch#f)bx
+  4G0v2\<Plug>(charsearch#f)bx
+  5G0d\<Plug>(charsearch#f)b
+  6G0d2\<Plug>(charsearch#f)b
+  7Gd\<Plug>(charsearch#f)b:normal! .\<CR>
+  8GI\<Plug>(charsearch#f)b_\<Plug>(charsearch#f)b_\<Plug>(charsearch#f)z_
 
 Expect:
   foo ar az
@@ -38,15 +38,15 @@ Given:
   rab zab foo
   rab zab foo
 
-Do(search#F):
-  $\<Plug>(search#F)bx\<Plug>(search#N)x
-  2G$2\<Plug>(search#F)bx\<Plug>(search#n)x
-  3G$v\<Plug>(search#F)bx
-  4G$v2\<Plug>(search#F)bx
-  5G$d\<Plug>(search#F)b
-  6G$d2\<Plug>(search#F)b
-  7G$d\<Plug>(search#F)b:normal! .\<CR>
-  8GA\<Plug>(search#F)b_\<Plug>(search#F)r_
+Do(charsearch#F):
+  $\<Plug>(charsearch#F)bx\<Plug>(charsearch#N)x
+  2G$2\<Plug>(charsearch#F)bx\<Plug>(charsearch#n)x
+  3G$v\<Plug>(charsearch#F)bx
+  4G$v2\<Plug>(charsearch#F)bx
+  5G$d\<Plug>(charsearch#F)b
+  6G$d2\<Plug>(charsearch#F)b
+  7G$d\<Plug>(charsearch#F)b:normal! .\<CR>
+  8GA\<Plug>(charsearch#F)b_\<Plug>(charsearch#F)r_
 
 
 Expect:
@@ -69,15 +69,15 @@ Given:
   foo bar baz
   foo bar baz
 
-Do(search#t):
-  0\<Plug>(search#t)ax\<Plug>(search#n)x
-  2G02\<Plug>(search#t)ax\<Plug>(search#N)x
-  3G0v\<Plug>(search#t)bx
-  4G0v2\<Plug>(search#t)bx
-  5G0d\<Plug>(search#t)b
-  6G0d2\<Plug>(search#t)b
-  7G0d\<Plug>(search#t)b:normal! .\<CR>
-  8GI\<Plug>(search#t)b_\<Plug>(search#t)b_
+Do(charsearch#t):
+  0\<Plug>(charsearch#t)ax\<Plug>(charsearch#n)x
+  2G02\<Plug>(charsearch#t)ax\<Plug>(charsearch#N)x
+  3G0v\<Plug>(charsearch#t)bx
+  4G0v2\<Plug>(charsearch#t)bx
+  5G0d\<Plug>(charsearch#t)b
+  6G0d2\<Plug>(charsearch#t)b
+  7G0d\<Plug>(charsearch#t)b:normal! .\<CR>
+  8GI\<Plug>(charsearch#t)b_\<Plug>(charsearch#t)b_
 
 Expect:
   foo ar az
@@ -99,15 +99,15 @@ Given:
   rab zab foo
   rab zab foo
 
-Do(search#F):
-  $\<Plug>(search#T)bx\<Plug>(search#N)x
-  2G$2\<Plug>(search#T)bx\<Plug>(search#n)x
-  3G$v\<Plug>(search#T)bx
-  4G$v2\<Plug>(search#T)bx
-  5G$d\<Plug>(search#T)b
-  6G$d2\<Plug>(search#T)b
-  7G$d\<Plug>(search#T)b:normal! .\<CR>
-  8GA\<Plug>(search#T)b_\<Plug>(search#T)r_
+Do(charsearch#F):
+  $\<Plug>(charsearch#T)bx\<Plug>(charsearch#N)x
+  2G$2\<Plug>(charsearch#T)bx\<Plug>(charsearch#n)x
+  3G$v\<Plug>(charsearch#T)bx
+  4G$v2\<Plug>(charsearch#T)bx
+  5G$d\<Plug>(charsearch#T)b
+  6G$d2\<Plug>(charsearch#T)b
+  7G$d\<Plug>(charsearch#T)b:normal! .\<CR>
+  8GA\<Plug>(charsearch#T)b_\<Plug>(charsearch#T)r_
 
 Expect:
   rabzabfoo
@@ -129,15 +129,15 @@ Given:
   foo bar bar
   foo bar bar
 
-Do (search#s):
-  0\<Plug>(search#s)arx\<Plug>(search#n)x
-  2G02\<Plug>(search#s)arx\<Plug>(search#N)x
-  3G0v\<Plug>(search#s)arx
-  4G0v2\<Plug>(search#s)arx
-  5G0d\<Plug>(search#s)ar
-  6G0d2\<Plug>(search#s)ar
-  7G0d\<Plug>(search#s)ar:normal! .\<CR>
-  8GI\<Plug>(search#s)oo_
+Do (charsearch#s):
+  0\<Plug>(charsearch#s)arx\<Plug>(charsearch#n)x
+  2G02\<Plug>(charsearch#s)arx\<Plug>(charsearch#N)x
+  3G0v\<Plug>(charsearch#s)arx
+  4G0v2\<Plug>(charsearch#s)arx
+  5G0d\<Plug>(charsearch#s)ar
+  6G0d2\<Plug>(charsearch#s)ar
+  7G0d\<Plug>(charsearch#s)ar:normal! .\<CR>
+  8GI\<Plug>(charsearch#s)oo_
 
 Expect:
   foo br br
@@ -159,15 +159,15 @@ Given:
   rab zab foo
   rab zab foo
 
-Do (search#S):
-  $\<Plug>(search#S)abx\<Plug>(search#N)x
-  2G$2\<Plug>(search#S)abx\<Plug>(search#n)x
-  3G$v\<Plug>(search#S)abx
-  4G$v2\<Plug>(search#S)abx
-  5G$d\<Plug>(search#S)ab
-  6G$d2\<Plug>(search#S)ab
-  7G$d\<Plug>(search#S)ab:normal! .\<CR>
-  8GA\<Plug>(search#S)ab_
+Do (charsearch#S):
+  $\<Plug>(charsearch#S)abx\<Plug>(charsearch#N)x
+  2G$2\<Plug>(charsearch#S)abx\<Plug>(charsearch#n)x
+  3G$v\<Plug>(charsearch#S)abx
+  4G$v2\<Plug>(charsearch#S)abx
+  5G$d\<Plug>(charsearch#S)ab
+  6G$d2\<Plug>(charsearch#S)ab
+  7G$d\<Plug>(charsearch#S)ab:normal! .\<CR>
+  8GA\<Plug>(charsearch#S)ab_
 
 Expect:
   rb zb foo
